@@ -26,6 +26,8 @@ function init(orientation) {
 
     var y, x, angle, neutralPosition = true;
 
+    var d;
+
     if (window.DeviceMotionEvent) {
         window.addEventListener("deviceorientation", function (event) {
 
