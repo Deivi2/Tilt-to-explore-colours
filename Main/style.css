@@ -1,0 +1,103 @@
+
+
+@media (orientation:portrait) {
+
+    .mainColor {
+        width: 320px;
+        height: 568px;
+        visibility: visible;
+        -webkit-transition: background 300ms ease-in 200ms;
+        -moz-transition: background 300ms ease-in 200ms;
+        -o-transition: background 300ms ease-in 200ms;
+        transition: background 300ms ease-in 200ms;
+    }
+
+    .colorLeft {
+        float: left;
+        width: 160px;
+        height: 160px;
+        -webkit-transition: background 300ms ease-in 200ms;
+        -moz-transition: background 300ms ease-in 200ms;
+        -o-transition: background 300ms ease-in 200ms;
+        transition: background 300ms ease-in 200ms;
+
+
+    }
+
+    .colorRight {
+        float: right;
+        width: 160px;
+        height: 160px;
+        -webkit-transition: background 300ms ease-in 200ms;
+        -moz-transition: background 300ms ease-in 200ms;
+        -o-transition: background 300ms ease-in 200ms;
+        transition: background 300ms ease-in 200ms;
+
+    }
+
+    .smallIcons {
+        width: 320px;
+    }
+
+
+
+}
+
+
+@media (orientation: landscape) {
+
+    .mainColor {
+        float: left;
+        width: 320px;
+        height: 320px;
+        visibility: visible;
+        -webkit-transition: background 300ms ease-in 200ms;
+        -moz-transition: background 300ms ease-in 200ms;
+        -o-transition: background 300ms ease-in 200ms;
+        transition: background 300ms ease-in 200ms;
+    }
+
+    .colorLeft {
+        float: right;
+        width: 230px;
+        height: 160px;
+        -webkit-transition: background 300ms ease-in 200ms;
+        -moz-transition: background 300ms ease-in 200ms;
+        -o-transition: background 300ms ease-in 200ms;
+        transition: background 300ms ease-in 200ms;
+
+
+    }
+
+    .colorRight {
+        float: right;
+        width: 230px;
+        height: 160px;
+        -webkit-transition: background 300ms ease-in 200ms;
+        -moz-transition: background 300ms ease-in 200ms;
+        -o-transition: background 300ms ease-in 200ms;
+        transition: background 300ms ease-in 200ms;
+
+    }
+
+    /*.smallIcons {*/
+        /*width: 320px;*/
+    /*}*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
