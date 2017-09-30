@@ -26,8 +26,6 @@ function init(orientation) {
 
     var y, x, angle, neutralPosition = true;
 
-    var d;
-
     if (window.DeviceMotionEvent) {
         window.addEventListener("deviceorientation", function (event) {
 
@@ -244,18 +242,20 @@ function init(orientation) {
 }
 
 
-var orientationHandler = function () {
-    if (window.screen.orientation.type === "landscape-primary") {
-        console.log('landscape');
-        init('landscape');
-    }
-    else if (window.screen.orientation.type === "portrait-primary") {
-        console.log('portrait');
-        init('portrait');
-    }
-    else if (window.orientation === undefined) {
-    }
-};
+init('portrait');
+
+// var orientationHandler = function () {
+//     if (window.screen.orientation.type === "landscape-primary") {
+//         console.log('landscape');
+//         init('landscape');
+//     }
+//     else if (window.screen.orientation.type === "portrait-primary") {
+//         console.log('portrait');
+//         init('portrait');
+//     }
+//     else if (window.orientation === undefined) {
+//     }
+// };
 
 // get notified when orientation changes
 window.addEventListener('orientationchange', orientationHandler);
