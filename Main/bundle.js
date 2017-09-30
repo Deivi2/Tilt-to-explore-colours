@@ -278,9 +278,9 @@ function init(orientation) {
                                                                 rightColorElement.style.backgroundImage = "url('./RED/portrait/RIGHT-GREEN.jpg')";
                                                 }
 
-                                                // document.getElementById("y").innerHTML = "scaleY(" + (Math.round(event.beta)) + ")";
-                                                // document.getElementById("x").innerHTML = "scaleX(" + (Math.round(event.gamma)) + ")";
-                                                // document.getElementById("angle").innerHTML = "rotateZ(" + (Math.round(event.alpha)) + "deg)";
+                                                document.getElementById("y").innerHTML = "scaleY(" + Math.round(event.beta) + ")";
+                                                document.getElementById("x").innerHTML = "scaleX(" + Math.round(event.gamma) + ")";
+                                                document.getElementById("angle").innerHTML = "rotateZ(" + Math.round(event.alpha) + "deg)";
                                 }, true);
                 } else {
                                 alert("Sorry, your browser doesn't support Device Orientation");
