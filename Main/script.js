@@ -1,5 +1,5 @@
 //Function init() for declaration of main functionality, it sets dom elements
-//to triggers right images depend in which side device is tilted.
+//to trigger right images depending in which side device is tilted.
 
 function init(orientation) {
 
@@ -23,22 +23,24 @@ function init(orientation) {
     rightColorElement.style.backgroundRepeat = "no-repeat";
 
 
-    //setting dimensions of images to be have size same as iphone 5s
+    //setting dimensions of images
 
     if (orientation === "portrait") {
-        mainColorElement.style.backgroundSize = "320px 568px";
+        mainColorElement.style.backgroundSize = "320px 320px";
         leftColorElement.style.backgroundSize = "160px 160px";
         rightColorElement.style.backgroundSize = "160px 160px";
-    } else {
-        mainColorElement.style.backgroundSize = "338px 320px";
-        leftColorElement.style.backgroundSize = "248px 160px";
-        rightColorElement.style.backgroundSize = "248px 160px";
+    } else if (orientation === "landscape") {
+        mainColorElement.style.backgroundSize = "320px 320px";
+        leftColorElement.style.backgroundSize = "160px 160px";
+        rightColorElement.style.backgroundSize = "160px 160px";
     }
 
-    //Event listener that listens deviceorientation event that every time
+
+    //Event listener that listens deviceorientation event when
     //device is moved it executes callback function with all declared functionality inside
 
     window.addEventListener("deviceorientation", function (event) {
+
 
         nextLeftGreen = leftColorElement.classList.contains('green');
         nextLeftRed = leftColorElement.classList.contains('red');
@@ -72,8 +74,6 @@ function init(orientation) {
             rightColorElement.classList.add('blue');
 
             neutralPosition = false;
-
-            console.log('next red', nextLeftRed);
 
         } else if (angle < -10 && neutralPosition && nextLeftRed) {
 
@@ -251,24 +251,22 @@ function init(orientation) {
         // document.getElementById("angle").innerHTML = "rotateZ(" + (Math.round(event.alpha)) + "deg)";
     }, true);
 
+
 }
 
-//We running our init function depending on our device orientation
-//and passing argument with current orientation.
 
-var orientationHandler = function () {
+//We running our init function depending on our device orientation inside orientationHandler function
+//which is called when orientation is changed and passing argument with current orientation.
+
+var orientationHandler = (function () {
     if (window.screen.orientation.type === "landscape-primary") {
-        console.log('landscape');
+        console.log('landscape');//current orientation
         init('landscape');
     }
     else if (window.screen.orientation.type === "portrait-primary") {
-        console.log('portrait');
+        console.log('portrait');//current orientation
         init('portrait');
     }
-};
+})();
 
-// get notified when orientation changes
 window.addEventListener('orientationchange', orientationHandler);
-
-// detect current orientation
-orientationHandler();

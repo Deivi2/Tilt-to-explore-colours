@@ -1,12 +1,15 @@
-.container {
-    width: 568px;
-}
+
 
 @media (orientation: portrait) {
 
+    .container {
+        width: 320px;
+    }
+
+
     .mainColor {
         width: 320px;
-        height: 568px;
+        height: 320px;
         visibility: visible;
         -webkit-transition: background 300ms ease-in 200ms;
         -moz-transition: background 300ms ease-in 200ms;
@@ -44,9 +47,13 @@
 
 @media (orientation: landscape) {
 
+    .container {
+        width: 480px;
+    }
+
     .mainColor {
         float: left;
-        width: 338px;
+        width: 320px;
         height: 320px;
         visibility: visible;
         -webkit-transition: background 300ms ease-in 200ms;
@@ -57,7 +64,7 @@
 
     .colorLeft {
         float: right;
-        width: 230px;
+        width: 160px;
         height: 160px;
         -webkit-transition: background 300ms ease-in 200ms;
         -moz-transition: background 300ms ease-in 200ms;
@@ -68,7 +75,7 @@
 
     .colorRight {
         float: right;
-        width: 230px;
+        width: 160px;
         height: 160px;
         -webkit-transition: background 300ms ease-in 200ms;
         -moz-transition: background 300ms ease-in 200ms;
